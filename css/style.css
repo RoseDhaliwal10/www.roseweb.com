@@ -1,0 +1,193 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    
+    }
+    
+    
+    header {
+    
+    display: grid;
+    
+    grid-template-columns: 75% 25%;
+    
+    border-style: dotted;
+    padding-top: 50px;
+    
+    }
+    
+    
+    .grid-item1 {
+    
+    color: #3E4B70;
+    
+    background-image: linear-gradient(#D4B37F, white);
+    
+    text-align: center;
+    
+    }
+    
+    
+    .grid-image {
+    
+    width: 23vw;
+    
+    }
+    
+    
+    .main {
+    
+    font-size: 16;
+    
+    background-image: url(../media/brown.jpg);
+    
+    color: #3E4B70;
+    
+    background-size: cover;
+    
+    padding: 50px 50px 50px 60px
+    
+    }
+    
+    
+    .welcome,
+    
+    .about,
+    
+    .overview,
+    
+    .blog {
+    
+    background-color: rgba(211, 182, 131, 0.8);
+    
+    padding: 20px;
+    
+    border-style: none none solid none;
+    
+    border-color: purple;
+    
+    }
+    
+    
+    .welcome h3,
+    
+    .about h3,
+    
+    .blog h3,
+    
+    .overview h3 {
+    
+    text-align: center;
+    
+    }
+    
+    
+    footer {
+    
+    color: #3E4B70;
+    
+    padding: 75px;
+    
+    text-align: center;
+    
+    background-image: linear-gradient(#D4B37F, white);
+    
+    }
+
+    @keyframes rotation{
+
+        0%{rotate: 10deg;}
+        
+        50%{rotate: -10deg;}
+        
+        100%{rotate: 0deg; }
+        
+        }
+
+@keyframes translation{
+    0%{transform:translate(200px, 0);}
+    100%{transform: translate(0,0);}
+    
+}
+
+@keyframes r-trans{
+    0%{transform:translate(-200px, 0);}
+    100%{transform: translate(0,0);}
+    
+}
+
+.h1-relative{
+    position: relative;
+    color:#3E4B70;
+    animation-name: rotation;
+    animation-duration: 3s;
+}
+    .h1-relative::after{
+        content: "";
+position: absolute;
+border: 0;
+width: 180px;
+height: 3px;
+background: purple;
+z-index: 1;
+right: 0;
+left: 0;
+top: 45px;
+margin: 0 auto;
+text-align: center;
+}
+  
+.navbar{
+    position: fixed !important;    
+    top: 0; 
+    overflow: hidden;
+    width: 100%;
+    background-image: linear-gradient(#D4B37F, white);
+}
+
+.move,
+.H-class,
+.TE-class{
+    animation-name: r-trans;
+    animation-duration: 3s;
+}
+
+.IE-class,
+.WG-class,
+.PA-class{
+    animation-name: translation;
+    animation-duration: 3s;
+}
+
+.IE-class:hover,
+.WG-class:hover,
+.PA-class:hover,
+.move:hover,
+.H-class:hover,
+.TE-class:hover{
+    transform:scale(1.07);
+
+transition:all 2s ease;
+}
+
+@media  screen and (max-width:576px) {
+
+    .IE-class:hover,
+.WG-class:hover,
+.PA-class:hover,
+.move:hover,
+.H-class:hover,
+.TE-class:hover{
+    transform:scale(1.04);
+
+transition:all 2s ease;
+}
+}
+
+@media  screen and (min-width:776px){
+
+
+}
+
+    
+    
+    
